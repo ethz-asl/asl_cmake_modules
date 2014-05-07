@@ -1,7 +1,7 @@
-A convenience wrapper that handles the include and link for opencv automatically for catkin packages.
+A catch-all repository for find scripts.
 
-Make sure that the ROS catkin package "opencv2" is somewhere in your workspace, then add 
+Simply add
 ```
-<build_depend>opencv2_catkin</build_depend>
+<depend_build>asl_cmake</depend_build>
 ```
-to your package. OpenCV will be automatically found and linked.
+to your package.xml to get access to the find scripts included in the ```cmake``` directory.
