@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>asl_cmake</name>
+  <name>asl_cmake_modules</name>
   <version>0.0.1</version> 
   <description>CMake scripts managed by ASL</description>
   <maintainer email="paul.furgale@mavt.ethz.ch">Paul Furgale</maintainer>
