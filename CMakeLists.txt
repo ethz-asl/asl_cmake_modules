@@ -3,18 +3,10 @@ project(asl_cmake_modules)
 
 find_package(catkin_simple REQUIRED)
 
-catkin_simple()
+find_package(catkin REQUIRED)
 
+catkin_package(CFG_EXTRAS asl_cmake_modules-extras.cmake)
 
-FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/cmake/*.cmake")
-
-cs_install()
-install(FILES ${files}
-        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/cmake
-)
-
-cs_export(CFG_EXTRAS ${files})
-
-
-message("Files: ${files}")
-message("Install: ${CATKIN_PACKAGE_SHARE_DESTINATION}")
+## Install all cmake files
+install(DIRECTORY cmake/Modules
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/cmake) 
